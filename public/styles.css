@@ -1,0 +1,325 @@
+*{
+    margin:0;
+}
+header{
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    margin-bottom: 40px;
+}
+header h1{
+    position: relative;
+    color: white;
+}
+footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 25px;
+}
+footer button{
+    color: #ccffff;
+    background-color: black;
+    border: 1px solid #ccffff;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    margin-right: 15px;
+    height: 28px;
+}
+
+
+.header-container{
+    margin-top: 25px;
+    margin-left: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccffff;
+    color: #ccffff;
+    cursor: pointer;
+}
+.header-container h1{
+    color: #ccffff;
+    letter-spacing: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+.header-container:hover{
+    color: #00ffff;
+    border: 1px solid #00ffff;
+}
+.header-container:hover h1{
+    color: #00ffff;
+}
+body{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0,0,0,1);
+}
+.imageContainer img{
+    width: 300px;
+    border: 1px solid black;
+}
+.imageContainer:hover{
+    transition-property: translateY;
+    transition-duration: 0.6s;
+    transform: translateY(-5px);
+}
+.imageContainer:hover p{
+    color: #ccffff;
+
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+label{
+    color: #ccffff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 5px;
+}
+#hideButton{
+    letter-spacing: 5px;
+    margin: 15px;
+    padding: 10px;
+    color: #ccffff;
+    background-color: black;
+    border: 1px solid #ccffff;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+#hideButton:hover{
+    border: 1px solid #00ffff;
+    color: #00ffff;
+}
+
+.inputType{
+    border: 1px solid #ccffff;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+#fileUpload{
+    color: #ccffff;
+    background-color: black;
+    border: 1px solid #ccffff;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+#upload-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+
+
+}
+.by{
+    font-size: 8px;
+    color: #00ffff;
+}
+#commentText{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+#nameComment{
+    color: #00ffff;
+}
+#timeComment{
+    font-size: 8px;
+}
+#submitButton:hover{
+    border: 1px solid #00ffff;
+    color: #00ffff;
+}
+#submitButton{
+    color: #ccffff;
+    background-color: black;
+    border: 1px solid #ccffff;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    margin-right: 15px;
+    height: 28px;
+}
+#outerFormContainer{
+    width: inherit;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#formContainer{
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    border: 1px solid #ccffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#formContainer h1{
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ccffff;
+
+}
+#uploadImgBut{
+    letter-spacing: 5px;
+    margin: 15px;
+    padding: 10px;
+    color: #ccffff;
+    background-color: black;
+    border: 1px solid #ccffff;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+#uploadImgBut:hover{
+    border: 1px solid #00ffff;
+    color: #00ffff;
+
+}
+#formContainer input{
+    margin: 3px;
+}
+#formContainer form{
+    border: 1px solid black;
+}
+#overflow{
+    overflow: hidden;
+}
+.image-modal{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* #outer-modal-container{
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+} */
+/* #inner-modal-container{
+    width: 70%;
+    height:auto;
+    display: flex;
+    background-color: rgba(0,0,0, 1);
+    align-items: center;
+    justify-content: center;
+    border:1px solid white;
+
+} */
+
+
+input{
+
+}
+
+
+
+#x-button{
+    font-size: 50px;
+    float: right;
+    color: white;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+/* #comment-section{
+    display: flex;
+    align-items: baseline;
+    width: 50%;
+    border-left: 1px solid white;
+    height: 100%;
+} */
+.modal-image-container{
+    /* border: 1px solid white; */
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 50px;
+    max-height: 500px;
+    width: auto;
+    background-color: rgba(0,0,0,0.75)
+}
+.modal-image-container img{
+    width: 400px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.modal-image-container p{
+    color:white;
+}
+.modal-image-container input{
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.comments-container{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
+}
+.imageContainer{
+    border: 1px solid black;
+    margin: 10px;
+    cursor: pointer;
+}
+.picTitle{
+    padding: 5px;
+}
+.margin{
+    margin: 5px;
+}
+.name{
+
+}
+.description{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.created_at{
+    font-size: 8px;
+}
+.title{
+
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ccffff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #00ffff;
+}

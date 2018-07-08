@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <title>Fishstagram</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+    <header>
+        <div class="header-container">
+            <h1 id="uploadButton" v-on:click="uploadFormIsVis">Upload</h1>
+        </div>
+    </header>
+        <div id="outerFormContainer" v-if="uploadVis">
+            <div id="formContainer">
+                <h1>Upload your picture</h1>
+                <div id="upload-form">
+                    <input class="inputType" v-model="imgFormInfo.title" name="title" type="text" >
+                    <label for="title">Title</label>
+                    <input class="inputType" v-model="imgFormInfo.description" name="description" type="text" >
+                    <label for="description">Description</label>
+                    <input class="inputType" v-model="imgFormInfo.username" type="text" name="username" >
+                    <label for="username">Username</label>
+                    <!-- <input class="inputType"  name="password" type="password" >
+                    <label for="password">Password</label><br> -->
+                    <!-- v-model="imgFormInfo.pass" -->
+                    <input id="fileUpload" @change="selectFile" type="file">
+
+
+                    <button id="uploadImgBut" v-on:click="uploadImage">Upload</button>
+                    <button id="hideButton" v-on:click="hideForm">Hide</button>
+                </div>
+            </div>
+        </div>
+    <div class="container" >
+        <div class="imageContainer" v-for="image in images" v-if="images.length > 0" v-on:click="openModal(image.id)">
+            <img v-bind:src="image.url" alt="">
+            <p>{{image.title}}</p>
+        </div>
+    </div>
+        <div v-on:dblclick="closeTheModal" id="overflow">
+            <image-modal
+            v-if="imageId"
+            v-bind:id="imageId"
+            ></image-modal>
+        </div>
+        <footer>
+            <div class="header-container">
+                <h1 id="moreButton" v-on:click="moreImages">More</h1>
+            </div>
+        </footer>
+    </div>
+    <script id="image-modal-template" type="text/x-template">
+        <div class="image-modal">
+            <!-- <div id="outer-modal-container"> -->
+                <div id="inner-modal-container">
+                    <div class="modal-image-container">
+                        <img v-bind:src= "targetPic.url">
+                        <p class="title margin">{{targetPic.title}}</p>
+                        <p class ="name margin">by {{targetPic.username}}</p>
+                        <p class="description margin">"{{targetPic.description}}"</p>
+                        <p class="created_at margin">{{targetPic.created_at}}</p>
+                        <div class="new-comment-container">
+                            <input class="inputType" v-model="newComment.comment" type="text" placeholder="Comment">
+                            <input class="inputType" v-model="newComment.username" type="text" placeholder="Username">
+                            <button class="button" id="submitButton" v-on:click="submitComment">Submit</button>
+                        </div>
+                        <div
+                        class="comments-container"
+                        v-if="comments.length > 0"
+                        v-for="comment in comments">
+                            <p id="commentText">"{{comment.comment}}"</p>
+                            <p id="nameComment">{{comment.username}}</p>
+                            <p id="timeComment">{{comment.created_at}}</p>
+                    </div>
+
+
+                    </div>
+        </div>
+    </div>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/js/vue.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
